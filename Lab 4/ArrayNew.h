@@ -1,15 +1,14 @@
 #pragma once
 #include <iostream>
 #include <memory>
-using namespace std;
 
 class ArrayNew {
-	private:
-		int size;
-		std::unique_ptr<int> data;
-	public:
-		ArrayNew(int size) : {size};
-		ArrayNew(const ArrayNew& source); //copy constructor
-		//smart arrays do not need deconstructors
-}
+private:
+    int size;
+    std::unique_ptr<int[]> data; //uses standard library type unique pointer as data's type.
 
+public:
+    ArrayNew(int size);
+    ArrayNew(const ArrayNew& source); // Copy constructor
+    ~ArrayNew(); // Destructor 
+};
