@@ -20,3 +20,9 @@ Array::~Array() { //Cycles through and deletes all objects.
 	}
 }
 
+
+int main() {
+	Array array1(2);
+	Array array2(array1); // Testing copy constructor for Array
+	return 0;
+} // array1 and array2 go out of scope here

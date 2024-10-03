@@ -14,3 +14,9 @@ ArrayNew::ArrayNew(const ArrayNew& source) : size(source.size), data(std::make_u
 ArrayNew::~ArrayNew() { //Deletes all objects
     std::cout << "Deleted an array with Unique Pointer of size " << size << "." << std::endl;
 }
+
+//int main (){
+//    ArrayNew arrayNew1(2);
+//    ArrayNew arrayNew2(arrayNew1); // Testing copy constructor for ArrayNew
+//    return 0;
+//} // arrayNew1 and arrayNew2 go out of scope here
