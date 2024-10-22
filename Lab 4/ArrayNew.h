@@ -11,4 +11,8 @@ public:
     ArrayNew(int size);
     ArrayNew(const ArrayNew& source); // Copy constructor
     ~ArrayNew(); // Destructor 
+
+    ArrayNew& operator=(const ArrayNew& source);
+
 };
+

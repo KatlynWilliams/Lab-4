@@ -14,3 +14,12 @@ ArrayNew::ArrayNew(const ArrayNew& source) : size(source.size), data(std::make_u
 ArrayNew::~ArrayNew() { //Deletes all objects
     std::cout << "Deleted an array with Unique Pointer of size " << size << "." << std::endl;
 }
+
+ArrayNew& ArrayNew::operator=(const ArrayNew& source) {
+	std::cout << "Assigning array to a copy of an object." << std::endl;
+	this->size = source.size;
+	for (int i = 0; i < size; i++) {
+		this->data[i] = source.data[i];
+	}
+	return *this;
+}
