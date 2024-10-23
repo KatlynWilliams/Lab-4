@@ -3,11 +3,12 @@
 
 int main() {
     {
+         {
         Array array1(2);
-        Array array2(array1); // Testing copy constructor for Array
+        Array array2(array1); // Testing copy constructor
         Array array3(3);
-        array3 = array2;
-        array3[1];
+        array3 = array2; // Testing assignment operator
+        std::cout << array3[1]; // Access an element
     } // array1 and array2 go out of scope here
 
     {
